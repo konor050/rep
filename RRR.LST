@@ -1,0 +1,96 @@
+Turbo Assembler	 Version 4.1	    10/10/21 13:23:27	    Page 1
+rrr.asm
+
+
+
+      1	0000			     LAB SEGMENT PARA 'CODE'
+      2				      ASSUME CS:LAB, DS:LAB, SS:LAB, ES:LAB
+      3				      ORG 100H
+      4	0100  E9 008A		     BEGIN: JMP	MAIN
+      5	      =000A		     CONST EQU 10
+*Warning* rrr.asm(5) Reserved word used	as symbol: CONST
+      6	0103  ??			    A101 DB ?
+      7	0104  56 45 4E 54 55 52	45+	    A102 DB 'VENTURE PUBLISHER'
+      8	      20 50 55 42 4C 49	53+
+      9	      48 45 52
+     10	0115  D6		     A103 DB 214
+     11	0116  40		     A104 DB 40H
+     12	0117  D4		     A105 DB 11010100B
+     13	0118  02 44 49 50 01 53	54+  A106 DB 02,'DIP',01,'STY',04,'SAI'
+     14	      59 04 53 41 49
+     15	0124  35 36 37 35 37	     A107 DB '56757'
+     16	0129  08*(00)		     A108 DB 8 DUP(0)
+     17	0131  DFF4		     B101 DW 0DFF4H
+     18	0133  00ED		     B102 DW 11101101B
+     19	0135  0115r		     B103 DW A103
+     20	0137  0003 0006	0007 0009 +  B104 DW 3,6,7,9,10
+     21	      000A
+     22	0141  04*(0000)		     B105 DW 4 DUP(0)
+     23	0149  ????????		     C101 DD ?
+     24	014D  00004158		     C102 DD 'AX'
+     25	0151  00007AAD		     C103 DD 31405
+     26	0155  00000011		     C104 DD A103-A102
+     27	0159  0000000A 00000022	     C105 DD 10,34
+     28	0161  ????????????????	     D101 DQ ?
+     29	0169  0000000000006D45	     D102 DQ 06D45H
+     30	0171  0000000000007AAD	     D103 DQ 31405
+     31	0179  ????????????????????   E103 DT ?
+     32	0183  00000000000000004F46   E102 DT 'OF'
+     33	018D			     MAIN PROC NEAR
+     34	018D  C3		     RET
+     35	018E			     MAIN ENDP
+     36	018E			     LAB ENDS
+     37				      END BEGIN
+Turbo Assembler	 Version 4.1	    10/10/21 13:23:27	    Page 2
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??DATE				  Text	 "10/10/21"
+??FILENAME			  Text	 "rrr	  "
+??TIME				  Text	 "13:23:27"
+??VERSION			  Number 040A
+@CPU				  Text	 0101H
+@CURSEG				  Text	 LAB
+@FILENAME			  Text	 RRR
+@WORDSIZE			  Text	 2
+A101				  Byte	 LAB:0103
+A102				  Byte	 LAB:0104
+A103				  Byte	 LAB:0115
+A104				  Byte	 LAB:0116
+A105				  Byte	 LAB:0117
+A106				  Byte	 LAB:0118
+A107				  Byte	 LAB:0124
+A108				  Byte	 LAB:0129
+B101				  Word	 LAB:0131
+B102				  Word	 LAB:0133
+B103				  Word	 LAB:0135
+B104				  Word	 LAB:0137
+B105				  Word	 LAB:0141
+BEGIN				  Near	 LAB:0100
+C101				  Dword	 LAB:0149
+C102				  Dword	 LAB:014D
+C103				  Dword	 LAB:0151
+C104				  Dword	 LAB:0155
+C105				  Dword	 LAB:0159
+CONST				  Number 000A
+D101				  Qword	 LAB:0161
+D102				  Qword	 LAB:0169
+D103				  Qword	 LAB:0171
+E102				  Tbyte	 LAB:0183
+E103				  Tbyte	 LAB:0179
+MAIN				  Near	 LAB:018D
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+LAB				  16  018E Para	  none	  CODE
+Turbo Assembler	 Version 4.1	    10/10/21 13:23:27	    Page 3
+Error Summary
+
+
+
+*Warning* rrr.asm(5) Reserved word used	as symbol: CONST
+
